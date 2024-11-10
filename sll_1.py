@@ -17,10 +17,7 @@ class SLL:
     """ > - <> - <> - <> - <> - <> - <> - < Insert > - <> - <> - <> - <> - <> - <    """
     def insert_at_begin(self,data):
         node = Node(data,self.head)
-        if not self.is_empty():
-            self.head = node
-        else:
-            self.head = node
+        self.head = node
 
     def insert_at_last(self,data):
         node = Node(data)
