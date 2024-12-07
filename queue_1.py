@@ -52,7 +52,3 @@ class Queue:
         return self.rear - self.front
 
 obj = Queue()
-obj.inQueue(1)
-obj.inQueue(2)
-obj.inQueue(3)
-print(obj.getSize())
