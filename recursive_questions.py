@@ -1,4 +1,5 @@
 class Recursive_problems:
+    
     """
     Question : 1 Write a recursive function to print first N natural numbers.
     Question : 2 Write a recursive function to print first N natural numbers in reverse order.
@@ -12,6 +13,7 @@ class Recursive_problems:
     Question : 10 Write a recursive function to print factorial of a number.
     Question : 11 Write a recursive function to calculate sum of squares of first N natural number.
     """
+
 
     def question_1(self, n):
         """ Write a recursive function to print first N natural numbers. """
@@ -89,5 +91,5 @@ class Recursive_problems:
             return 1
         return (n ** 2) + self.question_11(n - 1)
 
+
 obj = Recursive_problems()
-print(obj.question_11(5))
