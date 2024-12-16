@@ -6,6 +6,11 @@ class Recursive_problems:
     Question : 4 Write a recursive function to print first N even natural numbers.
     Question : 5 Write a recursive function to print first N odd natural numbers in reverse order.
     Question : 6 Write a recursive function to print first N even natural numbers in reverse order. 
+    Question : 7 Write a recursive function to print sum of first N natural numbers.
+    Question : 8 Write a recursive function to print sum of first odd N natural numbers.
+    Question : 9 Write a recursive function to print sum of first even N natural numbers.
+    Question : 10 Write a recursive function to print factorial of a number.
+    Question : 11 Write a recursive function to calculate sum of squares of first N natural number.
     """
 
     def question_1(self, n):
@@ -51,7 +56,38 @@ class Recursive_problems:
         if n == 1:
             return 1
         self.question_6(n - 1)
-        
+
+    def question_7(self, n):
+        """Write a recursive function to print sum of first N natural numbers."""
+        if n == 1 or n == 0:
+            return 1
+        return n + self.question_7(n - 1)
+
+    def question_8(self, n):
+        """Write a recursive function to print sum of first odd N natural numbers."""
+        if n == 1:
+            return 1
+        val = self.question_8(n - 1) + n
+        return (val - n) if n % 2 == 0 else val
+
+    def question_9(self, n):
+        """Write a recursive function to print sum of first even N natural numbers."""
+        if n == 2:
+            return 2
+        val = self.question_9(n - 1) + n
+        return (val - n) if n % 2 != 0 else val
+
+    def question_10(self, n):
+        """Write a recursive function to print factorial of a number."""
+        if n == 1:
+            return 1
+        return n * self.question_10(n - 1)
+
+    def question_11(self, n):
+        """Write a recursive function to calculate sum of squares of first N natural number."""
+        if n == 1:
+            return 1
+        return (n ** 2) + self.question_11(n - 1)
 
 obj = Recursive_problems()
-print(obj.__dir__())
+print(obj.question_11(5))
